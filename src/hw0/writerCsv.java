@@ -28,7 +28,7 @@ public class writerCsv {
 			System.out.println("Done  ");
 		} catch (
 
-				FileNotFoundException e) {
+		FileNotFoundException e) {
 			e.printStackTrace();
 
 		}
@@ -61,11 +61,11 @@ public class writerCsv {
 
 			} else
 
-				if (!wifilist.compare(TimeDate, point)) {
-					wifilist.SortSignal();
-					wifilist = new WiFiList(TimeDate, point);
-					result.add(wifilist);
-				}
+			if (!wifilist.compare(TimeDate, point)) {
+				wifilist.SortSignal();
+				wifilist = new WiFiList(TimeDate, point);
+				result.add(wifilist);
+			}
 			wifilist.add(newwifi);
 		}
 		Collections.sort(result);
@@ -106,7 +106,7 @@ public class writerCsv {
 			System.out.println("Done ");
 		} catch (
 
-				FileNotFoundException e) {
+		FileNotFoundException e) {
 			e.printStackTrace();
 
 		}
