@@ -9,10 +9,6 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
-
-
-
-
 public class Main {
 
 	public static void main(String[] args) throws ParseException, IOException {
@@ -48,8 +44,7 @@ public class Main {
 			filter = new Filter("SSID", SSID);
 			FileName = "SSIDCSV";
 			writerCsv.WriteByFilter(Wifilist, filter, FileName);
-			File file1 = new File(folder + "\\OneCsv\\" + FileName + ".csv");
-			CreateKml.csvtokml(file1);
+			writerCsv.make10List(Wifilist);
 		}
 			break;
 		case 2: {
@@ -61,8 +56,7 @@ public class Main {
 			filter = new Filter("Date", start + ";" + end);
 			FileName = "TimeCSV";
 			writerCsv.WriteByFilter(Wifilist, filter, FileName);
-			File file1 = new File(folder + "\\OneCsv\\" + FileName + ".csv");
-			CreateKml.csvtokml(file1);
+			writerCsv.make10List(Wifilist);
 		}
 			break;
 		case 3: {
@@ -79,18 +73,17 @@ public class Main {
 			filter = new Filter("Distance", place, distance);
 			FileName = "DistanceCSV";
 			writerCsv.WriteByFilter(Wifilist, filter, FileName);
-			File file1 = new File(folder + "\\OneCsv\\" + FileName + ".csv");
-			CreateKml.csvtokml(file1);
+			writerCsv.make10List(Wifilist);
 			break;
 		}
 		case 4: {
-
+			writerCsv.make10List(Wifilist);
 		}
 			break;
 
 		}
 		sc.close();
-		writerCsv.make10List(Wifilist);
+
 		String finalCsv = "C:\\Users\\Omri Baruch\\Desktop\\CSVFile\\FinalCsv\\FinalCSV.csv";
 		File file1 = new File(finalCsv);
 		CreateKml.csvtokml(file1);

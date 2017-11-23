@@ -59,10 +59,10 @@ public class readcsv {
 						Point3D point=new Point3D(lat,lon,alt);
 
 						if (Line[3].contains("/")) {
-							TimeDate = new SimpleDateFormat("dd/MM/yyyy hh:mm").parse(Line[3]);
+							TimeDate = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss").parse(Line[3]);
 							
 						} else {
-							TimeDate = new SimpleDateFormat("yyyy-MM-dd hh:mm").parse(Line[3]);
+							TimeDate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(Line[3]);
 						}
 						ssid=Line[1];
 						mac=Line[0];

@@ -87,14 +87,14 @@ public class WiFiList implements Comparable<WiFiList> {
 	}
 
 	public String WifiToString() {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 		String ans = uid + "," + sdf.format(timeStamp) + "," + point.getLat() + "," + point.getLon() + ","
 				+ point.getAlt() + "," + array.get(0).toString();
 		return ans;
 	}
 
 	public String toString() {
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 		String ans = uid + "," + sdf.format(timeStamp) + "," + point.getLat() + "," + point.getLon() + ","
 				+ point.getAlt() + "," + array.size() + ",";
 		for (int i = 0; i < array.size(); i++) {
