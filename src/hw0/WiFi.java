@@ -2,6 +2,10 @@ package hw0;
 
 import java.util.Date;
 
+  /**
+   * Wifi class defines a wifi point, representing a network by SSID,Mac,Channel and Date
+   * 
+   */
 
 
 public class WiFi implements Comparable<WiFi> {
@@ -26,6 +30,11 @@ public class WiFi implements Comparable<WiFi> {
 		this.signal = 0;
 	}
 
+	/**
+	   * compare between 2 wifi network by signal
+	   * if they equals return 1, else -1;
+	   */
+	
 	@Override
 	public int compareTo(WiFi other) {
 		if (this.signal == other.signal)

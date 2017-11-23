@@ -1,5 +1,9 @@
 package hw0;
 
+/**
+* The Point2D class defines a point representing a location in (lat,lon,alt) coordinate space.
+*/
+
 public class Point3D {
 
 	private double Lat;

@@ -1,5 +1,10 @@
 package hw0;
 
+/**
+*readcsv class read from Csv files
+*  
+*/
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -10,6 +15,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 
+
+/**
+* This function gets folder file. from this folder take only files with Csv suffix,
+*  read them and creates ArrayList<WiFiList>.
+*  this ArrayList contains: id,date,point3d,and Arraylist of wifi.
+
+* 
+*  
+*/
 
 public class readcsv {
 

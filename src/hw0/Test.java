@@ -1,16 +1,16 @@
 package hw0;
 
-import junit.framework.TestCase;
+//import junit.framework.TestCase;
 
-public class Test extends TestCase {
+//public class Test extends TestCase {
 
-	protected void setUp() throws Exception {
-		super.setUp();
-	}
+	//protected void setUp() throws Exception {
+	//	super.setUp();
+	//}
 
-	protected void tearDown() throws Exception {
-		super.tearDown();
-	}
+	//protected void tearDown() throws Exception {
+	//	super.tearDown();
+	//}
 
 	
-}
+//}

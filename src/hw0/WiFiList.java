@@ -1,5 +1,10 @@
 package hw0;
 
+/**
+ *	WifiList Class, Holds all the relevant info for each network.
+ *  Each WifiList has number of variables: id,date,point3d,and Arraylist of wifi.
+ */
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +36,11 @@ public class WiFiList implements Comparable<WiFiList> {
 		this.array = new ArrayList<WiFi>();
 
 	}
+	
+	/**
+	*private function  create arraylist of wifi,and contain up to 10 
+	*best wifi by signal. 
+	*/
 
 	private void removeTo10() {
 		ArrayList<WiFi> result = new ArrayList<WiFi>();
@@ -43,7 +53,11 @@ public class WiFiList implements Comparable<WiFiList> {
 	public void add(WiFi wifi) {
 		array.add(wifi);
 	}
-
+	/**
+	*sort array of wifi by signal
+	* 
+	*  
+	*/
 	public void SortSignal() {
 		Collections.sort(array);
 		removeTo10();
@@ -57,6 +71,11 @@ public class WiFiList implements Comparable<WiFiList> {
 		this.timeStamp = timeStamp;
 	}
 
+	
+	 /**
+	   * this function compare between 2 wifilist by date and point3d.
+	   * if they equals return true, else false;
+	   */
 	public boolean compare(Date timeStamp, Point3D point) {
 		return this.timeStamp.compareTo(timeStamp) == 0 && this.point.getLat() == point.getLat()
 				&& this.point.getLon() == point.getLon() && this.point.getAlt() == point.getAlt();

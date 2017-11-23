@@ -7,8 +7,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 
+/**
+* This class write Csv file
+*/
+
+
 public class writerCsv {
 
+	/**
+	* This function gets arrayList<wifiList> and create new united CSV.
+	*/
+
+	
 	public static void WriterCsv(ArrayList<WiFiList> CsvFile, String name) {
 		StringBuilder builder = new StringBuilder();
 		PrintWriter pw = null;
@@ -34,6 +44,14 @@ public class writerCsv {
 		}
 	}
 
+	/**
+	* This function gets arrayList<wifiList>, and unite wifi's that have the same date and cordination
+	* to arraylist of wifi.
+	* go to Write function to create CSV.
+	* 
+	*  
+	*/
+	
 	public static void make10List(ArrayList<WiFiList> One_Csv_File) {
 		ArrayList<WiFiList> result = new ArrayList<WiFiList>();
 		WiFiList.resetID();
@@ -72,6 +90,11 @@ public class writerCsv {
 		WritertoFinalCsv(result);
 
 	}
+	
+	/**
+	*  get filter ,file name and arrayList<wifiList>, and create new CSV who filtered by this filter.
+	* the file name will be the name of the Csv file. 
+	*/
 
 	public static void WriteByFilter(ArrayList<WiFiList> One_Csv_File, Filter filter, String FileName) {
 
@@ -88,6 +111,12 @@ public class writerCsv {
 
 	}
 
+	/**
+	*  get arrayList<wifiList>, and create new CSV.
+	* the new csv will represent wifi networks
+	*  that united to same line if they have same date and cordinations. 
+	*/
+	
 	private static void WritertoFinalCsv(ArrayList<WiFiList> CsvFile) {
 		StringBuilder builder = new StringBuilder();
 		PrintWriter pw = null;
