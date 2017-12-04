@@ -1,16 +1,19 @@
-package hw0;
+package hw0.Test;
 
-//import junit.framework.TestCase;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-//public class Test extends TestCase {
+/**
+ * AllTests Testing all the Testing Classes.
+ */
 
-	//protected void setUp() throws Exception {
-	//	super.setUp();
-	//}
-
-	//protected void tearDown() throws Exception {
-	//	super.tearDown();
-	//}
-
+	@RunWith(Suite.class)
+	@SuiteClasses({ Point3DTest.class, DateTest.class, WifiTest.class })
 	
+	public class Test {
+		
+		
+	}
+
 //}
