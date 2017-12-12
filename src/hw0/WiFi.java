@@ -10,9 +10,10 @@ import java.util.Date;
 
 public class WiFi implements Comparable<WiFi> {
 
-	String SSID,MAC;
-	int channel,signal;
-	Date date;
+	private String SSID,MAC;
+	private int channel,signal;
+	private Date date;
+	
 	
 	public WiFi(String SSID,String MAC,int channel,int signal,Date date) {
 		

@@ -40,6 +40,11 @@ public class Point3D {
 	public void setAlt(double alt) {
 		Alt = alt;
 	}
+
+	public boolean compare(Point3D p2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 	
 
 }

@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import java.text.ParseException;
 import java.util.ArrayList;
-
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +22,7 @@ public class Main {
 		Point3D place = null;
 		String FileName;
 
-		File folder = new File("C:\\Users\\Omri Baruch\\Desktop\\CSVFile");
+		File folder = new File("C:\\Users\\RoniGu\\Desktop\\CSVFile");
 		ArrayList<WiFiList> Wifilist = readcsv.readcsvFolder(folder);
 		writerCsv.WriterCsv(Wifilist, "InitCsv");
 
@@ -32,7 +32,8 @@ public class Main {
 		System.out.println("1.sort by name(SSID)");
 		System.out.println("2.sort by Time");
 		System.out.println("3.Sort By Distance");
-		System.out.println("4.Without filter");
+		System.out.println("4.Weighted Center Point by Mac");
+		System.out.println("5.Without filter");
 
 		choice = sc.nextInt();
 
@@ -76,17 +77,35 @@ public class Main {
 			writerCsv.make10List(Wifilist);
 			break;
 		}
+		
 		case 4: {
+			
+			writerCsv.WriterCsv(Algoritim1.Algoritim((Wifilist)),"CsvByMac");
+			
+		}
+			break;
+
+		
+		case 5: {
+			
 			writerCsv.make10List(Wifilist);
+			
 		}
 			break;
 
 		}
 		sc.close();
 
-		String finalCsv = "C:\\Users\\Omri Baruch\\Desktop\\CSVFile\\FinalCsv\\FinalCSV.csv";
+		String finalCsv = "C:\\Users\\RoniGu\\Desktop\\CSVFile\\FinalCsv\\FinalCSV.csv";
 		File file1 = new File(finalCsv);
 		CreateKml.csvtokml(file1);
 
+		
+		
+	}
+
+	private static void Algoritim1(ArrayList<WiFiList> wifilist) {
+		// TODO Auto-generated method stub
+		
 	}
 }
