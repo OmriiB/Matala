@@ -1,7 +1,7 @@
 package hw0;
 
 /**
- *	WifiList Class, Holds all the relevant info for each network.
+ @param	WifiList Class, Holds all the relevant info for each network.
  *  Each WifiList has number of variables: id,date,point3d,and Arraylist of wifi.
  */
 
@@ -38,7 +38,7 @@ public class WiFiList implements Comparable<WiFiList> {
 	}
 	
 	/**
-	*private function  create arraylist of wifi,and contain up to 10 
+	@param private function  create arraylist of wifi,and contain up to 10 
 	*best wifi by signal. 
 	*/
 
@@ -54,7 +54,7 @@ public class WiFiList implements Comparable<WiFiList> {
 		array.add(wifi);
 	}
 	/**
-	*sort array of wifi by signal
+	@param sort array of wifi by signal
 	* 
 	*  
 	*/
@@ -73,8 +73,9 @@ public class WiFiList implements Comparable<WiFiList> {
 
 	
 	 /**
+	  * @param
 	   * this function compare between 2 wifilist by date and point3d.
-	   * if they equals return true, else false;
+	   * @return if they equals return true, else false;
 	   */
 	public boolean compare(Date timeStamp, Point3D point) {
 		return this.timeStamp.compareTo(timeStamp) == 0 && this.point.getLat() == point.getLat()

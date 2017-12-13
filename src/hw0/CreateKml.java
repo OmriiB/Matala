@@ -15,6 +15,9 @@ import de.micromata.opengis.kml.v_2_2_0.Kml;
 import de.micromata.opengis.kml.v_2_2_0.TimePrimitive;
 import de.micromata.opengis.kml.v_2_2_0.TimeStamp;
 
+/**
+ * @author This class create KML file.
+ */
 public class CreateKml {
 
 	public static void csvtokml(File csv) throws IOException, ParseException {
@@ -24,9 +27,7 @@ public class CreateKml {
 		@SuppressWarnings("resource")
 		BufferedReader br = new BufferedReader(fr);
 
-		/**
-		 * Set icons for power signal
-		 */
+
 		// Green Icon//
 		IconStyle iconStyle = new IconStyle();
 		Icon icon = new Icon();
@@ -60,8 +61,8 @@ public class CreateKml {
 		int check = 0;
 		int numWifi;
 
-		/*
-		 * Copy information from Csv file to Kml file
+		/**
+		 @param Copy information from Csv file to Kml file
 		 */
 
 		while (str != null) {
@@ -94,7 +95,7 @@ public class CreateKml {
 	}
 
 	/**
-	 * This function change syntax for kml file and convert to TimeStamp
+	 @param This function change syntax for kml file and convert to TimeStamp
 	 */
 	private static TimeStamp StringTime(String time) {
 		TimeStamp timeStamp = new TimeStamp();
@@ -107,7 +108,7 @@ public class CreateKml {
 	}
 
 	/**
-	 * This function get power signal and set icon as per value green<yellow<red
+	 @param This function get power signal and set icon as per value green<yellow<red
 	 */
 	private static String color(String signal) {
 		int a = Integer.parseInt(signal);
