@@ -24,7 +24,7 @@ public class writerCsv {
 		StringBuilder builder = new StringBuilder();
 		PrintWriter pw = null;
 		try {
-			String finalCsv = "C:\\Users\\RoniGu\\Desktop\\CSVFile\\OneCsv\\" + name + ".csv";
+			String finalCsv = "C:\\Users\\Omri Baruch\\Desktop\\CSVFile\\OneCsv\\" + name + ".csv";
 			pw = new PrintWriter(new File(finalCsv));
 			builder.append("Id,Time,Lat,Lon,Alt,SSID,MAC,Channel,Signal");
 			builder.append("\n");

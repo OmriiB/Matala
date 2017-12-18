@@ -22,7 +22,7 @@ public class Main {
 		Point3D place = null;
 		String FileName;
 
-		File folder = new File("C:\\Users\\RoniGu\\Desktop\\CSVFile");
+		File folder = new File("C:\\Users\\Omri Baruch\\Desktop\\CSVFile");
 		ArrayList<WiFiList> Wifilist = readcsv.readcsvFolder(folder);
 		writerCsv.WriterCsv(Wifilist, "InitCsv");
 
@@ -80,7 +80,7 @@ public class Main {
 		
 		case 4: {
 			
-			writerCsv.WriterCsv(Algoritim1.Algoritim((Wifilist)),"CsvByMac");
+			writerCsv.WriterCsv(Algoritim2.Algoritim5((Wifilist)),"CsvByMac");
 			
 		}
 			break;
@@ -96,7 +96,7 @@ public class Main {
 		}
 		sc.close();
 
-		String finalCsv = "C:\\Users\\RoniGu\\Desktop\\CSVFile\\FinalCsv\\FinalCSV.csv";
+		String finalCsv = "C:\\Users\\Omri Baruch\\Desktop\\CSVFile\\FinalCsv\\FinalCSV.csv";
 		File file1 = new File(finalCsv);
 		CreateKml.csvtokml(file1);
 
